@@ -17,7 +17,5 @@ dependencies = [
     "accelerate>=1.0.0",
     "huggingface-hub>=0.27.0",
     "hf-transfer>=0.1.8",
-    "mlx>=0.31.2",
-    "mlx-lm>=0.29.1",
     "pillow-heif>=1.4.0",
 ]
