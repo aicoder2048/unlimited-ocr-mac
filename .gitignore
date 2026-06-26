@@ -1,0 +1,25 @@
+# ── Model weights: ~6.3 GB, NOT tracked. Pristine vendor files — reproducible via:
+#    huggingface-cli download baidu/Unlimited-OCR --local-dir models/unlimited_ocr_official
+models/
+
+# ── User inputs (book photos) and OCR outputs
+inputs/
+outputs/
+
+# ── Python virtual environment
+.venv/
+
+# ── Claude: track ONLY the unlimited-ocr skill; ignore workspace/local config/commands
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/unlimited-ocr/
+
+# ── Python caches / build / OS
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.DS_Store

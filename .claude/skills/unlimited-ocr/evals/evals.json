@@ -1,0 +1,29 @@
+{
+  "skill_name": "unlimited-ocr",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I scanned an old book chapter to a PDF, it's at /tmp/ocr_test/book.pdf. Can you OCR all the pages and give me one markdown file with the text?",
+      "expected_output": "Runs scripts/ocr.py on the PDF, produces outputs/book/result.md combining both pages with their text; tells the user where result.md is.",
+      "files": ["/tmp/ocr_test/book.pdf"]
+    },
+    {
+      "id": 2,
+      "prompt": "There's a folder of page screenshots at /tmp/ocr_test/imgs — extract the text from all of them into markdown.",
+      "expected_output": "Runs scripts/ocr.py on the directory, OCRs both images in natural order, writes a combined result.md.",
+      "files": ["/tmp/ocr_test/imgs"]
+    },
+    {
+      "id": 3,
+      "prompt": "read the text off this iphone photo /tmp/ocr_test/iphone.heic",
+      "expected_output": "Handles HEIC (converts to PNG), runs OCR with --no-crop is acceptable, returns the recognized text.",
+      "files": ["/tmp/ocr_test/iphone.heic"]
+    },
+    {
+      "id": 4,
+      "prompt": "I have a receipt photo from my phone, can you pull out the total and the date? It's at /tmp/ocr_test/iphone.heic",
+      "expected_output": "Uses the skill to OCR the HEIC receipt, then reads the total/date from the recognized text.",
+      "files": ["/tmp/ocr_test/iphone.heic"]
+    }
+  ]
+}

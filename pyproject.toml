@@ -1,0 +1,23 @@
+[project]
+name = "unlimited-ocr-mac"
+version = "0.1.0"
+description = "Run baidu/Unlimited-OCR locally on Apple Silicon (MPS)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.10.0",
+    "torchvision==0.25.0",
+    "transformers==4.57.1",
+    "pillow==12.1.1",
+    "matplotlib==3.10.8",
+    "einops==0.8.2",
+    "addict==2.4.0",
+    "easydict==1.13",
+    "pymupdf==1.27.2.2",
+    "psutil==7.2.2",
+    "accelerate>=1.0.0",
+    "huggingface-hub>=0.27.0",
+    "hf-transfer>=0.1.8",
+    "mlx>=0.31.2",
+    "mlx-lm>=0.29.1",
+    "pillow-heif>=1.4.0",
+]
